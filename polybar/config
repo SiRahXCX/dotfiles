@@ -95,7 +95,7 @@ label = "RAM %gb_used% | "
 [module/wireless-network]
 type = internal/network
 interface = wlan0
-label-connected = "%downspeed% | "
+label-connected = "v%downspeed% ^%upspeed% | "
 
 [module/battery]
 type = internal/battery
@@ -103,6 +103,7 @@ adapter = ADP0
 battery = BAT0
 label-charging = "BAT +%percentage%%"
 label-discharging = "BAT -%percentage%%"
+label-full = "BAT %percentage%%"
 
 [module/pulseaudio]
 type = internal/pulseaudio
