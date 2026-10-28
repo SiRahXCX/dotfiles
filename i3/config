@@ -13,10 +13,10 @@ bindsym $mod+q kill
 #bindsym ctrl+space exec rofi -show run
 #bindsym ctrl+space exec "rofi -show combi -modi window,run,combi -combi-modi window,run"
 #bindsym ctrl+space exec dmenu_run
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-4/launcher.sh
 
 # Open Dolphin file explorer
-bindsym $mod+shift+f exec dolphin
+bindsym $mod+shift+f exec nemo 
 
 # start zen browser
 bindsym $mod+b exec flatpak run app.zen_browser.zen
@@ -216,3 +216,7 @@ exec_always mkfifo /tmp/xobpipe && tail -f /tmp/xobpipe | xob -t 2170 & disown
 #exec ~/.i3/launch.sh
 
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+
+exec --no-startup-id xset s off
+exec --no-startup-id xset s noblank
+exec --no-startup-id xset -dpms
